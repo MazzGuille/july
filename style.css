@@ -1,0 +1,80 @@
+
+
+
+.h1{
+    display: flex;
+   justify-content: center;
+   color: white;
+   font-size: larger;
+   margin-top: 50px;
+   font-weight: 600;
+}
+
+.amor{
+    content: '\2665';
+    color: rgb(196, 0, 26);
+    font-size: 10rem;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    position: absolute;
+    animation-iteration-count: infinite;
+}
+
+.lovecon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+}
+
+body{
+    background-color: blueviolet;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-family: 'Dancing Script', cursive;
+}
+
+.amor:after {
+    
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .amor:before {
+    
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+}
